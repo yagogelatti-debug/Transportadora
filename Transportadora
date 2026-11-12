@@ -1,0 +1,1110 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Soluções inteligentes em transporte, logística e distribuição de cargas.">
+<title>TransLog | Transporte e Logística</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #101f35;
+  --navy2: #172d49;
+  --orange: #f28b26;
+  --white: #ffffff;
+  --light: #f4f6f9;
+  --text: #647084;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--navy);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* HEADER */
+
+header {
+  height: 85px;
+  display: flex;
+  align-items: center;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 15px #0000000b;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: var(--orange);
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+nav a {
+  font-size: 13px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+nav a:hover {
+  color: var(--orange);
+}
+
+.btn {
+  display: inline-block;
+  background: var(--orange);
+  color: white;
+  padding: 15px 23px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.btn:hover {
+  background: #d97512;
+  transform: translateY(-2px);
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background:
+    linear-gradient(90deg, rgba(9,22,39,.96), rgba(9,22,39,.65), rgba(9,22,39,.15)),
+    url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=2000&q=85')
+    center/cover;
+  color: white;
+}
+
+.hero-content {
+  max-width: 680px;
+  padding: 100px 0;
+}
+
+.tag {
+  color: var(--orange);
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 6vw, 68px);
+  line-height: 1.08;
+  font-weight: 900;
+  letter-spacing: -2px;
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  color: var(--orange);
+}
+
+.hero p {
+  color: #d1d9e4;
+  line-height: 1.8;
+  font-size: 16px;
+  max-width: 530px;
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-outline {
+  border: 1px solid #ffffff80;
+  color: white;
+  padding: 15px 23px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: var(--navy);
+}
+
+/* INDICADORES */
+
+.stats {
+  background: var(--navy);
+  color: white;
+  padding: 35px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 25px;
+}
+
+.stat {
+  text-align: center;
+  border-right: 1px solid #ffffff25;
+}
+
+.stat:last-child {
+  border: none;
+}
+
+.stat h2 {
+  color: var(--orange);
+  font-size: 30px;
+  margin-bottom: 7px;
+}
+
+.stat p {
+  font-size: 12px;
+  color: #c5d0de;
+}
+
+/* SECTIONS */
+
+section {
+  padding: 100px 0;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 55px;
+}
+
+.section-header .tag {
+  margin-bottom: 15px;
+}
+
+.section-header h2 {
+  font-size: clamp(29px, 4vw, 43px);
+  letter-spacing: -1.5px;
+  margin-bottom: 18px;
+}
+
+.section-header p {
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* SERVIÇOS */
+
+.services {
+  background: var(--light);
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 25px;
+}
+
+.service-card {
+  background: white;
+  padding: 38px 30px;
+  border-radius: 8px;
+  transition: .3s;
+  border-bottom: 3px solid transparent;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--orange);
+  box-shadow: 0 15px 35px #101f3510;
+}
+
+.service-icon {
+  font-size: 35px;
+  margin-bottom: 25px;
+}
+
+.service-card h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* SOBRE */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 65px;
+}
+
+.about-image {
+  height: 450px;
+  border-radius: 8px;
+  background:
+    url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1000&q=85')
+    center/cover;
+  position: relative;
+}
+
+.about-image::after {
+  content: '';
+  position: absolute;
+  inset: 15px -15px -15px 15px;
+  border: 3px solid var(--orange);
+  border-radius: 8px;
+  z-index: -1;
+}
+
+.about-content .tag {
+  margin-bottom: 15px;
+}
+
+.about-content h2 {
+  font-size: 39px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--text);
+  margin-bottom: 25px;
+}
+
+.features {
+  display: grid;
+  gap: 15px;
+}
+
+.feature {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.feature span {
+  color: var(--orange);
+  margin-right: 10px;
+}
+
+/* RASTREAMENTO */
+
+.tracking {
+  background: var(--navy);
+  color: white;
+}
+
+.tracking-box {
+  max-width: 750px;
+  margin: auto;
+  text-align: center;
+}
+
+.tracking-box h2 {
+  font-size: 38px;
+  margin-bottom: 18px;
+}
+
+.tracking-box p {
+  color: #c0ccda;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+.tracking-form {
+  display: flex;
+  background: white;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.tracking-form input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 15px;
+  font-size: 14px;
+  min-width: 0;
+}
+
+/* DIFERENCIAIS */
+
+.differentials {
+  background: white;
+}
+
+.differential-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 25px;
+  text-align: center;
+}
+
+.differential {
+  padding: 20px;
+}
+
+.differential div {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.differential h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.differential p {
+  color: var(--text);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* ORÇAMENTO */
+
+.quote {
+  background: var(--light);
+}
+
+.quote-box {
+  background: white;
+  max-width: 800px;
+  margin: auto;
+  padding: 45px;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px #101f350a;
+}
+
+.quote-box h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.quote-box > p {
+  text-align: center;
+  color: var(--text);
+  font-size: 13px;
+  margin-bottom: 35px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.form-group.full {
+  grid-column: 1/-1;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 14px;
+  border: 1px solid #e1e5eb;
+  border-radius: 5px;
+  font-family: inherit;
+  outline: none;
+  font-size: 13px;
+  width: 100%;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--orange);
+}
+
+.form-group textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.quote-box button {
+  width: 100%;
+  margin-top: 25px;
+}
+
+/* CTA */
+
+.cta {
+  background:
+    linear-gradient(90deg, #101f35ed, #101f35a0),
+    url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1600&q=85')
+    center/cover;
+  color: white;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: clamp(30px, 4vw, 43px);
+  margin-bottom: 18px;
+}
+
+.cta p {
+  color: #d0d8e3;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+/* FOOTER */
+
+footer {
+  background: #0a1728;
+  color: white;
+  padding: 65px 0 25px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 45px;
+}
+
+.footer-about p {
+  color: #aeb9c8;
+  font-size: 13px;
+  line-height: 1.8;
+  margin-top: 20px;
+  max-width: 350px;
+}
+
+.footer-column h3 {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.footer-column a,
+.footer-column p {
+  display: block;
+  color: #aeb9c8;
+  font-size: 12px;
+  margin-bottom: 13px;
+}
+
+.footer-column a:hover {
+  color: var(--orange);
+}
+
+.copyright {
+  border-top: 1px solid #ffffff20;
+  padding-top: 25px;
+  color: #8593a6;
+  font-size: 11px;
+  text-align: center;
+}
+
+/* WHATSAPP */
+
+.whatsapp {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 58px;
+  height: 58px;
+  background: #20c76a;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  z-index: 999;
+  box-shadow: 0 5px 20px #0003;
+  transition: .3s;
+}
+
+.whatsapp:hover {
+  transform: scale(1.1);
+}
+
+/* RESPONSIVIDADE */
+
+@media(max-width:850px) {
+  nav {
+    display: none;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 25px;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 10px 15px #0001;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .stat:nth-child(2) {
+    border: none;
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .about-image {
+    height: 350px;
+  }
+
+  .differential-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width:550px) {
+  section {
+    padding: 70px 0;
+  }
+
+  .hero {
+    min-height: 600px;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .differential-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tracking-box h2 {
+    font-size: 29px;
+  }
+
+  .tracking-form {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full {
+    grid-column: auto;
+  }
+
+  .quote-box {
+    padding: 25px 18px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .stat h2 {
+    font-size: 25px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#inicio" class="logo">TRANS<span>LOG.</span></a>
+
+    <nav id="navigation">
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre nós</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#rastreamento">Rastreamento</a>
+      <a href="#contato">Contato</a>
+      <a href="#orcamento" class="btn">Solicitar orçamento</a>
+    </nav>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  </div>
+</header>
+
+<!-- INÍCIO -->
+
+<section class="hero" id="inicio">
+  <div class="container">
+    <div class="hero-content">
+      <div class="tag">Transporte • Logística • Distribuição</div>
+
+      <h1>Movemos negócios. <span>Conectamos destinos.</span></h1>
+
+      <p>
+        Soluções completas em transporte e logística para sua empresa.
+        Segurança, compromisso e eficiência em cada entrega.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#orcamento" class="btn">Solicitar orçamento →</a>
+        <a href="#servicos" class="btn-outline">Conheça nossos serviços</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDICADORES -->
+
+<div class="stats">
+  <div class="container stats-grid">
+    <div class="stat">
+      <h2>100%</h2>
+      <p>Compromisso com o cliente</p>
+    </div>
+    <div class="stat">
+      <h2>24/7</h2>
+      <p>Suporte e atendimento</p>
+    </div>
+    <div class="stat">
+      <h2>BR</h2>
+      <p>Atuação logística</p>
+    </div>
+    <div class="stat">
+      <h2>+1</h2>
+      <p>Destino para conectar</p>
+    </div>
+  </div>
+</div>
+
+<!-- SOBRE -->
+
+<section id="sobre">
+  <div class="container about-grid">
+    <div class="about-image"></div>
+
+    <div class="about-content">
+      <div class="tag">Quem somos</div>
+
+      <h2>Logística inteligente para levar sua empresa mais longe.</h2>
+
+      <p>
+        Somos uma empresa dedicada a oferecer soluções em transporte
+        e logística, conectando empresas, fornecedores e clientes
+        através de operações eficientes e responsáveis.
+      </p>
+
+      <p>
+        Trabalhamos com foco na qualidade, segurança e pontualidade,
+        buscando sempre a melhor experiência para nossos parceiros.
+      </p>
+
+      <div class="features">
+        <div class="feature"><span>✓</span> Atendimento personalizado</div>
+        <div class="feature"><span>✓</span> Compromisso com prazos</div>
+        <div class="feature"><span>✓</span> Segurança operacional</div>
+        <div class="feature"><span>✓</span> Soluções sob medida</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+
+<section class="services" id="servicos">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag">O que fazemos</div>
+      <h2>Soluções completas em transporte</h2>
+      <p>
+        Estrutura e serviços pensados para atender às necessidades
+        de cada operação logística.
+      </p>
+    </div>
+
+    <div class="service-grid">
+
+      <div class="service-card">
+        <div class="service-icon">🚛</div>
+        <h3>Transporte de Cargas</h3>
+        <p>Movimentação de mercadorias com planejamento, organização e cuidado em todas as etapas.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📦</div>
+        <h3>Distribuição</h3>
+        <p>Soluções para distribuição de produtos, conectando empresas aos seus destinos.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🏭</div>
+        <h3>Logística Empresarial</h3>
+        <p>Atendimento às necessidades de transporte e movimentação de operações empresariais.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🛣️</div>
+        <h3>Transporte Rodoviário</h3>
+        <p>Operações rodoviárias planejadas de acordo com as necessidades de cada cliente.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📊</div>
+        <h3>Gestão Logística</h3>
+        <p>Organização e acompanhamento de processos para melhorar a eficiência operacional.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🤝</div>
+        <h3>Atendimento Corporativo</h3>
+        <p>Parcerias comerciais com atendimento personalizado para empresas de diferentes segmentos.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- RASTREAMENTO -->
+
+<section class="tracking" id="rastreamento">
+  <div class="container">
+    <div class="tracking-box">
+      <div class="tag">Acompanhamento</div>
+      <h2>Onde está sua carga?</h2>
+      <p>
+        Informe seu código de rastreamento para solicitar
+        informações atualizadas sobre sua entrega.
+      </p>
+
+      <form class="tracking-form" onsubmit="trackOrder(event)">
+        <input
+          type="text"
+          id="trackingCode"
+          placeholder="Digite seu código de rastreamento"
+          required
+        >
+        <button class="btn" type="submit">Consultar carga →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+
+<section class="differentials">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag">Nossos diferenciais</div>
+      <h2>Por que escolher a TransLog?</h2>
+      <p>Nosso compromisso é entregar muito mais do que mercadorias: entregamos confiança.</p>
+    </div>
+
+    <div class="differential-grid">
+      <div class="differential">
+        <div>🛡️</div>
+        <h3>Segurança</h3>
+        <p>Cuidado e responsabilidade durante as operações.</p>
+      </div>
+
+      <div class="differential">
+        <div>⏱️</div>
+        <h3>Pontualidade</h3>
+        <p>Planejamento para atender aos prazos acordados.</p>
+      </div>
+
+      <div class="differential">
+        <div>📍</div>
+        <h3>Organização</h3>
+        <p>Acompanhamento e controle dos processos logísticos.</p>
+      </div>
+
+      <div class="differential">
+        <div>🤝</div>
+        <h3>Parceria</h3>
+        <p>Relacionamentos duradouros com nossos clientes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORÇAMENTO -->
+
+<section class="quote" id="orcamento">
+  <div class="container">
+    <div class="quote-box">
+      <h2>Solicite seu orçamento</h2>
+      <p>Preencha as informações e nossa equipe poderá entrar em contato.</p>
+
+      <form id="quoteForm">
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label>Nome completo</label>
+            <input id="name" type="text" placeholder="Seu nome" required>
+          </div>
+
+          <div class="form-group">
+            <label>Empresa</label>
+            <input id="company" type="text" placeholder="Nome da empresa">
+          </div>
+
+          <div class="form-group">
+            <label>Telefone / WhatsApp</label>
+            <input id="phone" type="tel" placeholder="(00) 00000-0000" required>
+          </div>
+
+          <div class="form-group">
+            <label>Tipo de serviço</label>
+            <select id="service" required>
+              <option value="">Selecione</option>
+              <option>Transporte de cargas</option>
+              <option>Distribuição</option>
+              <option>Transporte rodoviário</option>
+              <option>Logística empresarial</option>
+              <option>Outro</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Origem</label>
+            <input id="origin" type="text" placeholder="Cidade de origem" required>
+          </div>
+
+          <div class="form-group">
+            <label>Destino</label>
+            <input id="destination" type="text" placeholder="Cidade de destino" required>
+          </div>
+
+          <div class="form-group full">
+            <label>Detalhes da carga</label>
+            <textarea id="details" placeholder="Descreva sua necessidade..."></textarea>
+          </div>
+
+        </div>
+
+        <button type="submit" class="btn">Enviar solicitação pelo WhatsApp →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+  <div class="container">
+    <div class="tag">Vamos conversar?</div>
+    <h2>Sua próxima entrega começa aqui.</h2>
+    <p>Entre em contato e descubra como podemos ajudar sua empresa.</p>
+    <a href="#orcamento" class="btn">Fale com nossa equipe →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer id="contato">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-about">
+        <a href="#inicio" class="logo">TRANS<span>LOG.</span></a>
+        <p>
+          Transporte e logística com compromisso, eficiência
+          e responsabilidade. Conectando negócios e destinos.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Links rápidos</h3>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#rastreamento">Rastreamento</a>
+        <a href="#orcamento">Orçamento</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Contato</h3>
+        <p>WhatsApp: (00) 00000-0000</p>
+        <p>E-mail: contato@translog.com.br</p>
+        <p>Atendimento comercial</p>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © <span id="year"></span> TransLog Transportes. Todos os direitos reservados.
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLUTUANTE -->
+
+<a class="whatsapp"
+   href="https://wa.me/5500000000000"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Conversar pelo WhatsApp">
+   ☎
+</a>
+
+<script>
+
+// CONFIGURAÇÃO
+// Substitua pelo WhatsApp real da empresa.
+// Formato: 55 + DDD + número.
+
+const WHATSAPP = "5500000000000";
+
+function toggleMenu() {
+  document.getElementById("navigation").classList.toggle("active");
+}
+
+document.querySelectorAll("nav a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.getElementById("navigation").classList.remove("active");
+  });
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// RASTREAMENTO
+// Encaminha o código à equipe.
+// Para rastreamento automático, integrar uma API de logística.
+
+function trackOrder(event) {
+  event.preventDefault();
+
+  const code = document.getElementById("trackingCode").value.trim();
+
+  if (!code) return;
+
+  const message = `Olá! Gostaria de consultar minha carga. Código: ${code}`;
+
+  window.open(
+    `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message)}`,
+    "_blank"
+  );
+}
+
+// SOLICITAÇÃO DE ORÇAMENTO
+
+document.getElementById("quoteForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const company = document.getElementById("company").value;
+  const phone = document.getElementById("phone").value;
+  const service = document.getElementById("service").value;
+  const origin = document.getElementById("origin").value;
+  const destination = document.getElementById("destination").value;
+  const details = document.getElementById("details").value;
+
+  const message = `
+Olá! Gostaria de solicitar um orçamento.
+
+*Nome:* ${name}
+*Empresa:* ${company || "Não informado"}
+*Telefone:* ${phone}
+*Serviço:* ${service}
+*Origem:* ${origin}
+*Destino:* ${destination}
+*Detalhes:* ${details || "Não informado"}
+  `;
+
+  window.open(
+    `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message)}`,
+    "_blank"
+  );
+});
+
+</script>
+
+</body>
+</html>
